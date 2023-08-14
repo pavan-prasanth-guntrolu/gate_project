@@ -21,7 +21,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/home", function (req, res) {
-  res.send("<h1>login succesfull</h1>");
+  res.sendFile(__dirname + "/main.html");
 });
 
 app.get("/sign-up", function (req, res) {
