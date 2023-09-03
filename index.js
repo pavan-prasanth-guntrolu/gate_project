@@ -17,7 +17,11 @@ const credSchema = new mongoose.Schema({
 const User = mongoose.model("user", credSchema);
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/login.html");
+  res.sendFile(__dirname + "/main.html");
+});
+
+app.get("/sectionone", function (req, res) {
+  res.sendFile(__dirname + "/sectionone.html");
 });
 
 app.get("/home", function (req, res) {
