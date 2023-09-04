@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script
       src="https://kit.fontawesome.com/94d8386822.js"
       crossorigin="anonymous"
@@ -10,6 +12,7 @@
     <title>Gate Exam Hub!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="main.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -47,239 +50,19 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
-    <style>
-      .main {
-        padding: 8% 10% 0 10%;
-        color: #ddd;
-        background-color: rgb(159, 152, 152);
-        font-family: "Open Sans", sans-serif;
-        height: 100vh;
-      }
-      .h1-banner {
-        font-size: 50px;
-        margin-bottom: 50px;
-      }
-      .h3-banner {
-        font-size: 25px;
-        line-height: 1.5;
-        letter-spacing: 1.5px;
-        margin-bottom: 60px;
-      }
-      .h4-banner {
-        font-weight: bold;
-        letter-spacing: 1.5px;
-        font-size: 20px;
-      }
-      .CTA {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #3ddc97; /* Change this to your desired button color */
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-        width: 150px;
-        height: 50px;
-        border: none;
-        margin-top: 15px;
-      }
-
-      .CTA:hover {
-        background-color: #05f28c;
-      }
-      .student-icons {
-        display: flex;
-        flex-direction: row;
-        margin-left: 150px;
-      }
-      .cta-n-icons {
-        display: flex;
-        flex-direction: row;
-        margin-top: 50px;
-      }
-      .cta-n-icons img {
-        border-radius: 50%;
-        margin-left: -10px;
-        background-color: black;
-      }
-      .cta-n-icons div {
-        border-color: white;
-      }
-      .student-imgs {
-        display: flex;
-      }
-
-      .student-imgs img {
-        width: 4.8rem;
-        height: 4.8rem;
-        border-radius: 50%;
-        margin-right: -1.6rem;
-        border: 3px solid #fdf2e9;
-      }
-
-      .student-imgs img:last-child {
-        margin-right: 0;
-      }
-      .students {
-        margin-left: 100px;
-      }
-      .content {
-        margin-top: 30px;
-      }
-
-      .info-section-para {
-        font-size: 20px;
-        line-height: 2;
-        letter-spacing: 2;
-        font-family: "Lora", serif;
-      }
-      .info h1 {
-        text-align: center;
-        font-family: "Rubik", sans-serif;
-      }
-      .info-head {
-        line-height: 1.5;
-        letter-spacing: 2;
-        font-family: "Rubik", sans-serif;
-      }
-      .nav-item {
-        border: solid 1px;
-        border-radius: 25px;
-        overflow: hidden;
-      }
-      .nav-item:hover {
-        border: none;
-      }
-      .nav-link {
-        color: rgb(42, 41, 41);
-        width: 110px;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        overflow: hidden;
-      }
-      .nav-link:hover {
-        background-color: #3ddc97;
-        color: white;
-      }
-      .navbar-brand {
-        color: rgb(42, 41, 41);
-      }
-      .navbar-brand:hover {
-        color: #3ddc97;
-      }
-      .desktop-1-child,
-      .desktop-1-item {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 1444px;
-        height: 1022.5px;
-      }
-      .desktop-1-item {
-        left: 478px;
-        width: 880px;
-        height: 1044px;
-        object-fit: cover;
-      }
-      .desktop-1 {
-        position: relative;
-        background-color: #fff;
-        width: 100%;
-        height: 1024px;
-        overflow: hidden;
-      }
-      .footer {
-        width: 100vw;
-        height: 400px;
-        background-color: #eee;
-      }
-      .foot-list-items ul {
-        font-size: 20px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        transition: 0.3s ease;
-      }
-      .foot-list-items ul:hover {
-        font-size: 20px;
-        color: #3ddc97;
-
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-      }
-      .foot-list-items {
-        margin-left: -30px;
-      }
-      .news-letter {
-        font-size: 20px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-      }
-      .news-letter p {
-        font-size: 20px;
-
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-
-        transition: 0.3s ease;
-      }
-      .news-letter p:hover {
-        color: #3ddc97;
-      }
-      .news-letter button {
-        border: none;
-        border-radius: 25px;
-        background-color: #05f28c;
-        color: rgb(42, 41, 41);
-        width: 110px;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        overflow: hidden;
-        height: 40px;
-        margin-left: 20px;
-        transition: 0.3s ease;
-      }
-      .news-letter input {
-        height: 40px;
-        border: none;
-        border-radius: 10px;
-      }
-      .news-letter button:hover {
-        background-color: #3ddc97;
-        color: white;
-      }
-      hr {
-        margin-top: 80px;
-      }
-      .rights {
-        font-family: "Rubik", sans-serif;
-        color: #aaa;
-      }
-      .rights ul {
-        list-style: none;
-        margin-left: 800px;
-      }
-      .rights ul li {
-        margin-right: 40px;
-      }
-      .journey {
-        height: 80px;
-        font-size: 30px;
-        font-family: "Rubik", sans-serif;
-      }
-      button.accordion-button:focus {
-        box-shadow: none;
-        outline: none;
-      }
-    </style>
   </head>
   <body>
-    <div class="nav-section fixed-top mt-3">
+    <div class="nav-section container-fluid fixed-top mt-3">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://res.cloudinary.com/dh6c27r32/image/upload/v1693752516/Unique_Shapes95_igqrtj.png"
+              alt="LOGO"
+              height="60"
+              width="60"
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -314,7 +97,7 @@
               </div>
               <div>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">about</a>
+                  <a class="nav-link" href="#footer">about</a>
                 </li>
               </div>
             </ul>
@@ -322,58 +105,7 @@
         </div>
       </nav>
     </div>
-
-    <div class="main" id="banner">
-      <div class="banner-section">
-        <h1 class="h1-banner">
-          Unlock Your Potential with GATE Entrance Exam Hub!
-        </h1>
-        <h3 class="h3-banner">
-          Welcome to your one-stop destination for GATE (Graduate Aptitude Test
-          in Engineering) preparation. Dive into a world of comprehensive
-          resources, handpicked YouTube channels, and insightful articles that
-          will empower you on your journey to GATE success. Stay Updated with
-          In-Depth Articles Embark on this learning adventure and pave your way
-          to excellence. Your GATE success story starts here. Start exploring
-          now!
-        </h3>
-        <h4 class="h4-banner">
-          📚 Explore Expert-Recommended YouTube Channels 📖
-        </h4>
-        <h4 class="h4-banner">🎯 Ace Your GATE Exam with Confidence</h4>
-        <div class="cta-n-icons">
-          <a href="#content"><button class="CTA">Explore &darr;</button></a>
-          <div class="students">
-            <div class="student-imgs">
-              <img
-                src="https://res.cloudinary.com/dh6c27r32/image/upload/v1691596200/customer-1_mlqoj6.jpg"
-                alt="Customer photo"
-              />
-              <img
-                src="https://res.cloudinary.com/dh6c27r32/image/upload/v1691596222/customer-2_ikqcwf.jpg"
-                alt="Customer photo"
-              />
-              <img
-                src="https://res.cloudinary.com/dh6c27r32/image/upload/v1691596241/customer-3_yvbfgv.jpg"
-                alt="Customer photo"
-              />
-              <img
-                src="https://res.cloudinary.com/dh6c27r32/image/upload/v1691596259/customer-4_yq6mjz.jpg"
-                alt="Customer photo"
-              />
-              <img
-                src="https://res.cloudinary.com/dh6c27r32/image/upload/v1691596278/customer-5_zcf9mr.jpg"
-                alt="Customer photo"
-              />
-              <img
-                src="https://res.cloudinary.com/dh6c27r32/image/upload/v1691596295/customer-6_uecm9r.jpg"
-                alt="Customer photo"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="vanta" id="banner"></div>
     <div class="info container mt-5" id="features">
       <h1>Syllabus-Centric Learning Strategy</h1>
 
@@ -493,7 +225,7 @@
         </div>
       </div>
     </div>
-    <div class="footer p-5">
+    <div class="footer p-5" id="footer">
       <div class="d-flex justify-content-between">
         <div>
           <h1 class="mb-5">Logo</h1>
@@ -540,13 +272,9 @@
         </div>
       </div>
     </div>
-    <script>
-      document
-        .querySelector(".video-link")
-        .addEventListener("click", function () {
-          const radio = document.querySelector(".radio-btn");
-          radio.setAttribute("checked", "checked");
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+
+    <script src="frontend.js"></script>
   </body>
 </html>

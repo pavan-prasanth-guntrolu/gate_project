@@ -5,9 +5,14 @@ const mongoose = require("mongoose");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb://127.0.0.1:27017/gateDB", {
-  useNewUrlParser: true,
-});
+app.use(express.static("public"));
+
+mongoose.connect(
+  "mongodb+srv://pavanprasanth48850:Testnithin1$@cluster0.a0q7kmg.mongodb.net/gateDB",
+  {
+    useNewUrlParser: true,
+  }
+);
 
 const credSchema = new mongoose.Schema({
   user: String,
