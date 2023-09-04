@@ -1,0 +1,218 @@
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.nav-section {
+  transition: all 0.5s ease;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.info {
+  width: 100vw;
+}
+
+.info-section-para {
+  font-size: 20px;
+  line-height: 2;
+  letter-spacing: 2;
+  font-family: "Lora", serif;
+}
+.info h1 {
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+.info-head {
+  line-height: 1.5;
+  letter-spacing: 2;
+  font-family: "Rubik", sans-serif;
+}
+.nav-item {
+  border: solid 1px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.nav-item:hover {
+  border: none;
+  color: white;
+}
+.nav-link {
+  color: white;
+  width: 110px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+  background-color: #3ddc97;
+  transition: all 0.5s ease;
+}
+.nav-link:visited,
+.nav-link:hover {
+  color: white;
+  width: 110px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+  color: white;
+}
+
+.nav-link:hover {
+  background-color: #3ddc972e;
+  color: white !important;
+}
+
+.footer {
+  width: 100vw;
+  height: 400px;
+  background-color: #eee;
+}
+.footer-logo {
+  filter: drop-shadow(0px 0px 5px #3ddc97);
+}
+.footer-logo:hover {
+  filter: drop-shadow(0px 0px 5px #00ff91);
+}
+.foot-list-items ul {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+.foot-list-items ul:hover {
+  font-size: 20px;
+  color: #3ddc97;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.foot-list-items {
+  margin-left: -30px;
+}
+.news-letter {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.news-letter p {
+  font-size: 20px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+
+  transition: 0.3s ease;
+}
+.news-letter p:hover {
+  color: #3ddc97;
+}
+.news-letter button {
+  border: none;
+  border-radius: 25px;
+  background-color: #05f28c;
+  color: rgb(42, 41, 41);
+  width: 110px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+  height: 40px;
+  margin-left: 20px;
+  transition: 0.3s ease;
+}
+.news-letter input {
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+}
+.news-letter button:hover {
+  background-color: #3ddc97;
+  color: white;
+}
+hr {
+  margin-top: 80px;
+}
+.rights {
+  font-family: "Rubik", sans-serif;
+  color: #aaa;
+}
+.rights ul {
+  list-style: none;
+  margin-left: 800px;
+}
+.rights ul li {
+  margin-right: 40px;
+}
+.journey {
+  height: 80px;
+  font-size: 30px;
+  font-family: "Rubik", sans-serif;
+}
+button.accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+.vanta {
+  height: 100vh;
+  width: 100vw;
+}
+.nav-section img {
+  filter: drop-shadow(0px 0px 5px #3ddc97);
+}
+
+.nav-section img:hover {
+  filter: drop-shadow(0px 0px 5px #00ff80);
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.banner-content h1 {
+  margin-top: 16rem;
+  text-align: center;
+  font-family: "poppins", sans-serif;
+}
+.banner-content p {
+  margin-top: 16rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "poppins", sans-serif;
+}
+
+.banner-content p {
+  color: white;
+  position: relative;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* .banner-content p::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid #3ddc97;
+  animation: typing 20s steps(100) infinite;
+  background-color: #3ddc97;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+} */
+
+.banner-text {
+  margin-left: auto;
+  margin-right: auto;
+}
