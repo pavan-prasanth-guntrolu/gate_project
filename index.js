@@ -21,9 +21,12 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://127.0.0.1:27017/gateDB", {
-  useNewUrlParser: true,
-});
+mongoose.connect(
+  "mongodb+srv://pavanprasanth48850:Testnithin1$@cluster0.a0q7kmg.mongodb.net/?retryWrites=true&w=majority/gateDB",
+  {
+    useNewUrlParser: true,
+  }
+);
 
 const credSchema = new mongoose.Schema({
   user: String,
