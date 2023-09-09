@@ -22,7 +22,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 mongoose.connect(
-  "mongodb+srv://pavanprasanth48850:Testnithin1$@cluster0.a0q7kmg.mongodb.net/?retryWrites=true&w=majority/gateDB",
+  "mongodb+srv://pavanprasanth48850:Testnithin1$@cluster0.a0q7kmg.mongodb.net/gateDB",
   {
     useNewUrlParser: true,
   }
