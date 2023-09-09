@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udemy-like Course Page</title>
+    <style>
+      /* CSS for styling (same as before) */
+      /* ... */
+      /* CSS for styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+      }
+      header {
+        background-color: #3ddc97;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding: 10px;
+        margin-top: 20px;
+      }
+      .course-section {
+        margin-bottom: 10px;
+      }
+      .course-title {
+        font-size: 24px;
+        margin: 0;
+      }
+      .accordion-button {
+        cursor: pointer;
+        background-color: #3ddc97;
+        color: #fff;
+        border: none;
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+        text-transform: uppercase;
+      }
+      .accordion-content {
+        display: none;
+        padding: 10px;
+      }
+      .accordion-content a {
+        color: black;
+        margin-right: 25rem;
+        margin-left: 5rem;
+      }
+      video {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Your Course</h1>
+    </header>
+    <div class="container"></div>
+    <script>
+      const course_name = async function () {
+        const response = await fetch("/course-name")
+          .then((response) => response.json())
+          .then((data) => {
+            const courseName = data.course;
+            const totalSections = data.sections;
+
+            const titleEl = document.querySelector("header h1");
+            titleEl.textContent = courseName;
+
+            const container = document.querySelector(".container");
+
+            for (let i = 0; i < totalSections; i++) {
+              // Create a new course section
+              const newSection = document.createElement("div");
+              newSection.className = "course-section";
+
+              // Add an accordion button
+              const newButton = document.createElement("button");
+              newButton.className = "accordion-button";
+              newButton.textContent = `Section ${i + 1}: ${"sample"}`;
+              newSection.appendChild(newButton);
+
+              // Add an accordion content
+              const newContent = document.createElement("div");
+              newContent.className = "accordion-content";
+
+              // Add a link to watch the video
+              const newLink = document.createElement("a");
+              newLink.href = "video-page.html"; // Provide the correct video URL
+              newLink.target = "_blank";
+              newLink.textContent = "Watch Video";
+              newContent.appendChild(newLink);
+
+              // Add a checkbox to mark as completed
+              const newCheckbox = document.createElement("label");
+              const newCheckboxInput = document.createElement("input");
+              newCheckboxInput.type = "checkbox";
+              newCheckboxInput.name = "video-status";
+              newCheckbox.appendChild(newCheckboxInput);
+              newCheckbox.appendChild(
+                document.createTextNode(" Mark as Completed")
+              );
+              newContent.appendChild(newCheckbox);
+
+              // Initially hide the accordion content
+              newContent.style.display = "none";
+
+              // Append the new section to the container
+              container.appendChild(newSection);
+              container.appendChild(newContent);
+
+              // Add a click event listener to the new course section
+              newButton.addEventListener("click", () => {
+                // Toggle the display of the associated content
+                if (
+                  newContent.style.display === "none" ||
+                  newContent.style.display === ""
+                ) {
+                  newContent.style.display = "block";
+                } else {
+                  newContent.style.display = "none";
+                }
+              });
+
+              // Add a change event listener to the new checkbox
+              newCheckboxInput.addEventListener("change", () => {
+                // You can add your code here to handle checkbox state changes
+                if (newCheckboxInput.checked) {
+                  // Checkbox is checked, section is marked as completed
+                  // You can add your logic here, e.g., send a request to update the server
+                  console.log(`Section ${i + 1} is marked as completed.`);
+                } else {
+                  // Checkbox is unchecked, section is not completed
+                  // You can add your logic here if needed
+                }
+              });
+            }
+          });
+      };
+
+      course_name();
+    </script>
+  </body>
+</html>

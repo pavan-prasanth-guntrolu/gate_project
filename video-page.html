@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udemy-like Course Page</title>
+    <style>
+      /* CSS for styling (same as before) */
+      /* ... */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #0074e4;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .course-section {
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+      .course-title {
+        font-size: 24px;
+        margin: 0;
+      }
+      .accordion-button {
+        cursor: pointer;
+        background-color: #0074e4;
+        color: #fff;
+        border: none;
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+        text-transform: uppercase;
+      }
+      .accordion-content {
+        display: none;
+        padding: 10px;
+      }
+      video {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Your Course</h1>
+    </header>
+    <div class="container">
+      <div class="course-section">
+        <h2 class="course-title">Course Title</h2>
+        <button class="accordion-button">Section 1: Introduction</button>
+        <div class="accordion-content">
+          <a href="video-page" target="_blank">Watch Video</a>
+          <label
+            ><input type="radio" name="video-status" /> Mark as Completed</label
+          >
+        </div>
+      </div>
+      <!-- Add more sections as needed -->
+    </div>
+    <script>
+      // JavaScript for the accordion functionality (same as before)
+      /* ... */
+      const accordionButtons = document.querySelectorAll(".accordion-button");
+
+      accordionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const content = button.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
